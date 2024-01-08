@@ -5,7 +5,7 @@ import Hero from "@/components/Hero";
 import Projects from "@/components/Projects";
 import Skills from "@/components/Skills";
 import WorkExperience from "@/components/WorkExperience";
-import type { NextPage } from "next";
+import type { NextPage } from "next"; 
 import Link from "next/link";
 import ericPhoto from '../public/eric.jpeg'
 
