@@ -2,11 +2,14 @@
 import React from 'react'
 import logisticsPic from '../public/logistics.jpeg'
 import {motion} from 'framer-motion'
+import { Project } from '@/typings'
+import { urlFor } from '@/sanity'
 
-type Props = {}
+type Props = {
+    projects: Project[]
+}
 
-export default function Projects({}: Props) {
-const projects = [1,2,3,4,5]
+export default function Projects({projects}: Props) {
 
   return (
     <div>
@@ -15,8 +18,8 @@ const projects = [1,2,3,4,5]
 
 
         <div className='relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]'>
-            {projects.map((project , i) =>(
-                <div className='w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-20 md:p-44 h-screen'>
+            {projects.map((project,i) =>(
+                <div key={project._id} className='w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-20 md:p-44 h-screen'>
                     <motion.img
                     initial={{
                         y:-300,
@@ -25,15 +28,18 @@ const projects = [1,2,3,4,5]
                     transition={{ duration:1.2}}
                     whileInView={{ opacity:1, y:0}}
                     viewport={{once:true}}
-                    src={logisticsPic.src} alt='' />
+                    src={urlFor(project.image).url()} alt='' />
                     <div className=' space-y-10 px-0 md:px-10 max-w-6xl '>
-                        <h4 className='text-4xl font-semibold text-center'>
-                            <span className=' underline decoration-[#f7ab0a]/50' >Case study {i+1} out of {projects.length}:</span>{' '} Logistics System</h4>
-
+                        <h4 className='text-4xl font-semibold text-center'> 
+                            <span className=' underline decoration-[#f7ab0a]/50' >Case study {i+1} out of {projects.length}:</span>{' '} {project.title}
+                        </h4>
+                        <div className='flex items-center space-x-2 justify-center'>
+                            {project?.technologies.map((technology,i)=>(
+                                <img className='h-10 w-10' key={technology._id} src={urlFor(technology.image).url()} alt='' />
+                            ))}
+                        </div>
                             <p className=' text-lg text-center md:text-left '>
-                            Freight transportation is one of the most important industries to the health of the US economy. It not only provides a vital lifeline of essential products across the country, but it also gives us a valuable insight into consumer behavior and market fluctuations. When freight providers use tech tools to make their operations more efficient, there’s an opportunity to keep this indispensable economic resource serving the nation effectively.
-
-
+                                {project.summary}
                             </p>
                     </div>
                 </div>
