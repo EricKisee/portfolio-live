@@ -2,10 +2,14 @@
 import React from 'react'
 import {motion} from "framer-motion"
 import ericPhoto from '../public/eric.jpeg'
+import { PageInfo } from '@/typings'
+import { urlFor } from '@/sanity'
 
-type Props = {}
+type Props = {
+  pageInfo: PageInfo
+}
 
-export default function About({}: Props) {
+export default function About({pageInfo}: Props) {
   return (
     <motion.div 
       initial={{opacity:0}}
@@ -28,7 +32,7 @@ export default function About({}: Props) {
             duration:1.2
           }}
           // viewport={{once:true}}
-          src={ericPhoto.src}
+          src={urlFor(pageInfo?.profilePic).url()}
           className='-mb-20 md:mb-0 flex-shrink-0 w-56 h-56 rounded-full object-cover md:rounded-lg md:w-64 md:h-95 xl:w-[500px] xl:h-[600px]'
           />
 
@@ -37,7 +41,7 @@ export default function About({}: Props) {
               Here is a {" "}
               <span className='underline decoration-[#f7ab0a]/50'>little</span>{" "} background
               </h4>
-              <p className='text-sm'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              <p className='text-sm'>{pageInfo?.backgroundInformation}</p>
           </div>
 
     </motion.div>
