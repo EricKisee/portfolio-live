@@ -29,20 +29,20 @@ export default function ContactMe({}: Props) {
     <div className=' my-10 h-screen w-screen flex relative flex-col text-center md:text-left md:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center'>
         <h3 className=' absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl '> Contact</h3>
 
-        <div className='flex flex-col space-y-10 h-21 overflow-y-scroll'>
-            <h4 className=' text-4xl font-semibold text-center'>Share some feedback. {' '} <span className=' decoration-[#F7AB0A]/50 underline'>Lets Talk.</span></h4> 
+        <div className='flex flex-col space-y-10 h-21 scrollbar-thin overflow-y-scroll'>
+            <h4 className=' text-xl sm:text-xl md:text-2xl font-semibold text-center'>Share some feedback. {' '} <span className=' decoration-[#F7AB0A]/50 underline'>Lets Talk.</span></h4> 
             <div className='space-y-10'>
                 <div className=' flex items-center space-x-5 justify-center'>
                     <PhoneIcon className='text-[#F7AB0A] h-7 w-7 animate-pulse'/>
-                    <p className='text-2xl'>{"(+254) 700 316 098"} </p>
+                    <p className='text-xl'>{"(+254) 700 316 098"} </p>
                 </div>
                 <div className=' flex items-center space-x-5 justify-center'>
                     <EnvelopeIcon className='text-[#F7AB0A] h-7 w-7 animate-pulse'/>
-                    <p className='text-2xl'> EricKiseeMulwa@gmail.com </p>
+                    <p className='text-xl'> EricKiseeMulwa@gmail.com </p>
                 </div>
                 <div className=' flex items-center space-x-5 justify-center'>
                     <MapPinIcon className='text-[#F7AB0A] h-7 w-7 animate-pulse'/>
-                    <p className='text-2xl'> Nairobi, Kenya </p>
+                    <p className='text-xl'> Nairobi, Kenya </p>
                 </div>
             </div>
 
