@@ -3,7 +3,6 @@
 import React from 'react'
 import { Cursor, useTypewriter } from 'react-simple-typewriter'
 import BackgroundCircles from './BackgroundCircles'
-import ericPhoto from '../public/eric.jpeg'
 import Link from 'next/link'
 import { PageInfo } from '@/typings'
 import { urlFor } from '@/sanity'
@@ -16,9 +15,9 @@ type Props = {
 export default function Hero ({pageInfo}:Props) {
     const [text, count] = useTypewriter({
         words : [
-            `Hi, I go by ${pageInfo?.name}`,
-            `Someone in love with JAVA`,
-            `Never minds a cup of coffee :)`,
+            `In the realm where coffee meets code,`,
+            `Behold the Java sorcerer - ${pageInfo?.name}`,
+            `Conjuring digital brilliance with every keystroke!`,
         ],
         loop: true,
         delaySpeed:2000

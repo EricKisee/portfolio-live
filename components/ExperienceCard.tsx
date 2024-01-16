@@ -2,8 +2,6 @@
 
 import React from 'react'
 import {motion} from 'framer-motion'
-import safLogo from '../public/safaricom.png'
-import officeLogo from '../public/office.png'
 import { Experience } from '@/typings'
 import { urlFor } from '@/sanity'
 
