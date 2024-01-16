@@ -15,7 +15,6 @@ import { fetchExperiences } from "@/utils/fetchExperiences";
 import { fetchSkills } from "@/utils/fetchSkills";
 import { fetchProjects } from "@/utils/fetchProjects";
 import { fetchSocials } from "@/utils/fetchSocials";
-import { urlFor } from "@/sanity";
 
 type Props = {
   pageInfo: PageInfo
@@ -66,7 +65,7 @@ const Home = ({
   <Link href='#hero'>
     <footer className="sticky bottom-5 w-full cursor-pointer">
       <div className="flex items-center justify-center">
-        <img className="h-10 w-10 rounded-full filter grayscale hover:grayscale-0 cursor-pointer" src={urlFor(pageInfo.heroImage).url()} alt="" />
+        <img className="h-10 w-10 rounded-full filter grayscale hover:grayscale-0 cursor-pointer" src={ericPhoto.src} alt="" />
       </div>
     </footer>
   </Link>
