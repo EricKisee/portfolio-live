@@ -1,6 +1,5 @@
 'use client'
 import React from 'react'
-import logisticsPic from '../public/logistics.jpeg'
 import {motion} from 'framer-motion'
 import { Project } from '@/typings'
 import { urlFor } from '@/sanity'

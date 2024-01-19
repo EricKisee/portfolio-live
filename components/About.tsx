@@ -1,7 +1,6 @@
 'use client'
 import React from 'react'
 import {motion} from "framer-motion"
-import ericPhoto from '../public/eric.jpeg'
 import { PageInfo } from '@/typings'
 import { urlFor } from '@/sanity'
 
