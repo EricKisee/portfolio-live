@@ -27,6 +27,7 @@ export default function Projects({projects}: Props) {
                     transition={{ duration:1.2}}
                     whileInView={{ opacity:1, y:0}}
                     viewport={{once:true}}
+                    className='object-cover xl:w-[500px] xl:h-[600px]'
                     src={urlFor(project.image).url()} alt='' />
                     <div className=' space-y-10 px-0 md:px-10 max-w-6xl '>
                         <h4 className='text-4xl font-semibold text-center'> 
