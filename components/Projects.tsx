@@ -37,7 +37,7 @@ export default function Projects({projects}: Props) {
                                 <img className='h-10 w-10' key={technology._id} src={urlFor(technology.image).url()} alt='' />
                             ))}
                         </div>
-                            <p className=' text-lg text-center md:text-left '>
+                            <p className=' text-sm text-center md:text-left '>
                                 {project.summary}
                             </p>
                     </div>
