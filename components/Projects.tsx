@@ -20,7 +20,7 @@ export default function Projects({ projects }: Props) {
         console.log('scrollToItem - ', index)
 
         if (itemsRef.current[index]) {
-            itemsRef.current[index].scrollIntoView({
+            itemsRef.current[index]?.scrollIntoView({
                 behavior: "smooth",
                 block: "nearest",
                 inline: "center",
