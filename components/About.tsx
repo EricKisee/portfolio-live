@@ -32,14 +32,15 @@ export default function About({pageInfo}: Props) {
           }}
           // viewport={{once:true}}
           src={urlFor(pageInfo?.profilePic).url()}
-          className='-mb-20 md:mb-0 flex-shrink-0 w-56 h-56 rounded-full object-cover md:rounded-lg md:w-64 md:h-95 xl:w-[500px] xl:h-[600px]'
+          className='-mb-20 md:mb-0 flex-shrink-0 w-56 h-56 rounded-full object-cover md:rounded-lg md:w-90 md:h-90 xl:w-[500px] xl:h-[500px]'
           />
 
           <div className='space-y-10 px-0 md:px-10'>
             <h4 className='text-4xl font-semibold'>
-              Here is a {" "}
-              <span className='underline decoration-[#f7ab0a]/50'>little</span>{" "} background
+              The {" "}
+              <span className='underline decoration-[#f7ab0a]/50'>Visionary</span>{" "} Technologist
               </h4>
+                <p className='text-sm font-bold italic'>&quot;Great software isn&rsquo;t just built&mdash;it&rsquo;s engineered with precision, tested for excellence, and deployed with resilience.&quot;</p>
               <p className='text-sm'>{pageInfo?.backgroundInformation}</p>
           </div>
 
