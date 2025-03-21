@@ -23,7 +23,7 @@ export default function ExperienceCard({experience}: Props) {
                 y:0
             }}
             viewport={{once:true}}
-            className='w-32 h-32 rounded-full object-cover object-center'
+            className='hidden sm:flex w-32 h-32 rounded-full object-cover object-center'
             src={urlFor(experience.companyImage).url()}
             alt=''
             />
