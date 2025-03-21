@@ -15,10 +15,10 @@ type Props = {
 export default function Hero ({pageInfo}:Props) {
     const [text, count] = useTypewriter({
         words : [
-            `Software Development,`,
-            `Solutions Architecture,`,
+            `Software Developer,`,
+            `Solution Architect,`,
             `Quality Assuarance,`,
-            `DevOps.`,
+            `DevOps Engineer.`,
         ],
         loop: true,
         delaySpeed:2000
