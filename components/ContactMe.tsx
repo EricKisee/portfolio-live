@@ -20,9 +20,32 @@ export default function ContactMe({}: Props) {
         formState: {errors}
     } = useForm<Inputs>()
 
-    const onSubmit: SubmitHandler<Inputs> = (data) => {
-        window.location.href = `mailto:erickiseemulwa@gmail.com?subject=${data.subject}}&body=Good day, my name is ${data.name}. ${data.message} (${data.email}) `
-    }
+    // const onSubmit: SubmitHandler<Inputs> = (data) => {
+    //     window.location.href = `mailto:erickiseemulwa@gmail.com?subject=${data.subject}}&body=Good day, my name is ${data.name}. ${data.message} (${data.email}) `
+    // }
+
+    const onSubmit: SubmitHandler<Inputs> = async (data) => {
+        try {
+          const res = await fetch('/api/contact', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(data),
+          });
+      
+          if (!res.ok) {
+            const error = await res.json();
+            alert(error.message || 'Something went wrong.');
+            return;
+          }
+      
+          alert('Thanks! Your message has been sent.');
+        } catch (err) {
+          console.error('Submit error:', err);
+          alert('There was an error submitting the form.');
+        }
+      }
+
+      
 
   return (
     <div className=' my-10 h-screen w-screen flex relative flex-col text-center md:text-left md:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center'>
@@ -47,10 +70,10 @@ export default function ContactMe({}: Props) {
 
             <form onSubmit={handleSubmit(onSubmit)} className=' flex flex-col sm:space-y-0 md:space-y-2 w-fit mx-auto'>
                 <div className='flex flex-col  md:space-x-2 sm:flex-row' >
-                    <input required {...register('name')} placeholder='Name' className='contactInput' type="text" />
-                    <input required {...register('email')} placeholder='Email' className='contactInput' type="email" />
+                    <input required {...register('firstname')} placeholder='FirstName' className='contactInput' type="text" />
+                    <input required {...register('lastname')} placeholder='LastName' className='contactInput' type="text" />
                 </div>
-                <input required {...register('subject')} placeholder='Subject' className='contactInput' type="text" />
+                <input required {...register('email')} placeholder='Email' className='contactInput' type="email" />
                 <textarea required {...register('message')} placeholder='Message' className='contactInput' />
                 <button type='submit' className=' bg-[#F7AB0A] py-5 px-10 rounded-md text-black font-bold text-lg  '>Submit</button>
             </form>

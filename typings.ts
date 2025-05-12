@@ -65,3 +65,12 @@ export interface Social extends SanityBody {
     title: string
     url: string
 }
+
+export interface Message extends SanityBody {
+    _type: 'message'
+    name: string
+    email: string
+    subject: string
+    message: string
+    createdAt: Date
+}
