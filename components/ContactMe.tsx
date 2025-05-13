@@ -74,7 +74,7 @@ export default function ContactMe({}: Props) {
       <div className='flex flex-col space-y-10 h-21'>
         <h4 className='text-xl sm:text-xl md:text-2xl font-semibold text-center'>
           Share some feedback.{' '}
-          <span className='decoration-[#F7AB0A]/50 underline'>Let's Talk.</span>
+          <span className='decoration-[#F7AB0A]/50 underline'>Let&apos;s Talk.</span>
         </h4>
 
         <div className='space-y-10'>

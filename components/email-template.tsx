@@ -36,7 +36,7 @@ export const EmailTemplate: React.FC<Readonly<EmailTemplateProps>> = ({
       <p>Hi {firstName} 👋,</p>
 
       <p>
-        Thanks for reaching out! I'm <strong>Eric</strong>, your future partner in building sleek,
+        Thanks for reaching out! I&apos;m <strong>Eric</strong>, your future partner in building sleek,
         scalable, and smart software solutions. Whether you need stunning frontends, powerful
         backends, or full-stack magic — you’ve landed in the right place.
       </p>
