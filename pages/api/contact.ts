@@ -41,7 +41,12 @@ export default async function handler(
       from: `Eric Kisee <${process.env.RESEND_FROM_EMAIL}>`,
       to: [email],
       subject: "Thanks for contacting us!",
-      react: EmailTemplate({ firstName: firstname }),
+      react: EmailTemplate({ 
+        firstName: firstname,
+        verificationLink: 'https://example.com/verify',
+        newsletterLink: 'https://example.com/newsletter',
+        servicesLink: 'https://example.com/services',
+      }),
     });
 
     if (error) {
