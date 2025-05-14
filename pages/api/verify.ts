@@ -11,8 +11,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     }
 
   const user = await sanityClient.fetch(
-    `*[_type == "user" && token == $token && !isVerified][0]`,
-    { token: token as string }
+    `*[_type == "user" && token == "${token}" && !isVerified][0]`
   );
 
   if (!user || new Date(user.expiresAt) < new Date()) {
