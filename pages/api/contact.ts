@@ -55,7 +55,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
           servicesLink: `${process.env.NEXT_PUBLIC_BASE_URL}/services`,
         });
       } else {
-        // ❌ Not yet verified: update token
+        // ❌ Not yet verified: update token ------
         await sanityClient
           .patch(existingUser._id)
           .set({ token, createdAt, expiresAt })
