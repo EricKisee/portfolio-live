@@ -5,6 +5,7 @@ import { motion } from 'framer-motion'
 import { Project } from '@/typings'
 import { urlFor } from '@/sanity'
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import Link from 'next/link'
 
 type Props = {
     projects: Project[]
@@ -44,6 +45,7 @@ export default function Projects({ projects }: Props) {
                         className="w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-20 md:p-44 h-screen"
                         >
 
+
                         <motion.img
                             initial={{ y: -300, opacity: 0 }}
                             transition={{ duration: 1.2 }}
@@ -62,6 +64,9 @@ export default function Projects({ projects }: Props) {
                                 ))}
                             </div>
                             <p className="text-sm text-center md:text-left">{project.summary}</p>
+                            <div className="text-cennter">
+                                 <Link href={project.linkToBuild}><button className='heroButton'>Visit</button></Link>
+                            </div>
                         </div>
                     </div>
                 ))}
