@@ -38,7 +38,7 @@ export const EmailTemplate: React.FC<Readonly<EmailTemplateProps>> = ({
       <p>
         Thanks for reaching out! I&apos;m <strong>Eric</strong>, your future partner in building sleek,
         scalable, and smart software solutions. Whether you need stunning frontends, powerful
-        backends, or full-stack magic — you’ve landed in the right place.
+        backends, or full-stack magic — you&apos;ve landed in the right place.
       </p>
 
       <p>
@@ -47,8 +47,7 @@ export const EmailTemplate: React.FC<Readonly<EmailTemplateProps>> = ({
       </p>
 
       <p>
-        🎁 <strong>Limited-Time Offer:</strong> Get <strong>15% off</strong> your first project with
-        me — just mention this email!
+        🎁 <strong>Let's kickstart your first project with a special welcome -  just  mention this email and I&apos;ll take care of the rest. </strong>
       </p>
 
       <p>
@@ -56,7 +55,7 @@ export const EmailTemplate: React.FC<Readonly<EmailTemplateProps>> = ({
         <a href={verificationLink} style={{ color: '#3aafa9' }}>
           verify your email address
         </a>{' '}
-        so I know it’s really you.
+        so I know it&apos;s really you.
       </p>
 
       <p>
