@@ -92,15 +92,15 @@ export const EmailTemplate: React.FC<Readonly<EmailTemplateProps>> = ({
       >
         <p>Follow me for tech tips & project showcases:</p>
         <div>
-          <a href="https://twitter.com/yourhandle" style={{ margin: '0 10px', color: '#3aafa9' }}>
+          <a href="https://twitter.com/erickisee" style={{ margin: '0 10px', color: '#3aafa9' }}>
             Twitter
           </a>
           |
-          <a href="https://github.com/yourhandle" style={{ margin: '0 10px', color: '#3aafa9' }}>
+          <a href="https://github.com/erickisee" style={{ margin: '0 10px', color: '#3aafa9' }}>
             GitHub
           </a>
           |
-          <a href="https://linkedin.com/in/yourhandle" style={{ margin: '0 10px', color: '#3aafa9' }}>
+          <a href="https://linkedin.com/in/erickisee" style={{ margin: '0 10px', color: '#3aafa9' }}>
             LinkedIn
           </a>
         </div>
