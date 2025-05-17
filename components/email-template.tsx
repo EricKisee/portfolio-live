@@ -47,7 +47,7 @@ export const EmailTemplate: React.FC<Readonly<EmailTemplateProps>> = ({
       </p>
 
       <p>
-        🎁 <strong>Let's kickstart your first project with a special welcome -  just  mention this email and I&apos;ll take care of the rest. </strong>
+        🎁 <strong>Let&apos;s kickstart your first project with a special welcome -  just  mention this email and I&apos;ll take care of the rest. </strong>
       </p>
 
       <p>
