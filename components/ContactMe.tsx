@@ -77,7 +77,7 @@ export default function ContactMe({}: Props) {
           <span className='decoration-[#F7AB0A]/50 underline'>Let&apos;s Talk.</span>
         </h4>
 
-        <div className='space-y-10'>
+        <div className='hidden md:flex-col md:flex space-y-10'>
           <div className='flex items-center space-x-5 justify-center'>
             <PhoneIcon className='text-[#F7AB0A] h-7 w-7 animate-pulse' />
             <p className='text-xl'>(+254) 700 316 098</p>
