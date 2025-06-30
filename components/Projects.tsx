@@ -63,7 +63,7 @@ export default function Projects({ projects }: Props) {
                                     <img className="h-10 w-10" key={technology._id} src={urlFor(technology.image).url()} alt="" />
                                 ))}
                             </div>
-                            <p className="text-sm text-center md:text-left">{project.summary}</p>
+                            <p className="text-sm text-center md:text-left line-clamp-6">{project.summary}</p>
                             <div className="text-cennter">
                                  <Link href={project.linkToBuild}><button className='heroButton'>Visit</button></Link>
                             </div>
